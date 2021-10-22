@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2021 lúc 05:06 AM
+-- Thời gian đã tạo: Th10 22, 2021 lúc 05:18 AM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `exams` (
   `id` int(11) NOT NULL,
   `exam_title` varchar(30) NOT NULL,
-  `exam_date` date NOT NULL,
+  `exam_datetime` date NOT NULL,
   `duration` int(11) NOT NULL,
   `total_question` int(11) NOT NULL,
-  `mark_per_right_answer` float NOT NULL,
+  `marks_per_right_answer` float NOT NULL,
   `created_on` date NOT NULL DEFAULT current_timestamp(),
   `status` varchar(20) NOT NULL,
   `exam_code` varchar(20) NOT NULL
@@ -43,7 +43,7 @@ CREATE TABLE `exams` (
 -- Đang đổ dữ liệu cho bảng `exams`
 --
 
-INSERT INTO `exams` (`id`, `exam_title`, `exam_date`, `duration`, `total_question`, `mark_per_right_answer`, `created_on`, `status`, `exam_code`) VALUES
+INSERT INTO `exams` (`id`, `exam_title`, `exam_datetime`, `duration`, `total_question`, `marks_per_right_answer`, `created_on`, `status`, `exam_code`) VALUES
 (1, 'KT1', '2021-10-23', 90, 25, 2, '2021-10-22', 'Pending', 'code1'),
 (2, 'KT2', '2021-10-23', 120, 50, 1, '2021-10-22', 'Created', 'code2'),
 (3, 'KT3', '2021-10-23', 90, 25, 2, '2021-10-22', 'Started', 'code3'),
