@@ -2,7 +2,7 @@
 include './header.php';
 include './config.php';
 ?>
-<h2 class="text-center">Thêm bài thi</h2>
+<h2>Thêm bài thi</h2>
 
 
 <form method="post">
