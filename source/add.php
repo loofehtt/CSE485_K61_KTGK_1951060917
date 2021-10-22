@@ -76,7 +76,7 @@ if (isset($_POST['Save'])) {
     if (mysqli_query($conn, $sql)) {
         header('location:index.php');
     } else {
-        header('location:Error.php');
+        header('location:error.php');
     }
 }
 
