@@ -41,7 +41,12 @@ $id = $_GET['id'];
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Trạng thái</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="status">
+            <select name="status">
+                <option value="Pending">Pending</option>
+                <option value="Created">Created</option>
+                <option value="Started">Started</option>
+                <option value="Completed">Completed</option>
+            </select>
         </div>
     </div>
 
