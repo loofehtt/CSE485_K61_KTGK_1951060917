@@ -1,12 +1,11 @@
 <?php
 include './header.php';
 include './config.php';
+$id = $_GET['id'];
 ?>
-<h2 class="text-center">Thêm bài thi</h2>
-
+<h2>Thay đổi thông tin bài thi</h2>
 
 <form method="post">
-
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Tên bài thi</label>
         <div class="col-sm-10">
@@ -17,7 +16,7 @@ include './config.php';
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Ngày thi</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" name="examdate" placeholder="yyyy-mm-dd">
+            <input type="date" class="form-control" name="examdate" placeholder="yyyy-mm-dd">
         </div>
     </div>
     <div class="form-group row">
@@ -39,6 +38,12 @@ include './config.php';
             <input type="text" class="form-control" name="marks">
         </div>
     </div>
+    <div class="form-group row">
+        <label for="" class="col-sm-2 col-form-label">Trạng thái</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="status">
+        </div>
+    </div>
 
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Mã truy cập bài thi</label>
@@ -58,8 +63,6 @@ include './config.php';
 
 </form>
 
-
-
 <?php
 if (isset($_POST['Save'])) {
     $title = $_POST['title'];
@@ -67,19 +70,20 @@ if (isset($_POST['Save'])) {
     $time = $_POST['examtime'];
     $questions = $_POST['questions'];
     $marks = $_POST['marks'];
+    $status = $_POST['status'];
     $code = $_POST['code'];
     //? câu lệnh
-    $sql = "INSERT INTO `exams`(`exam_title`, `exam_datetime`, `duration`, `total_question`, `marks_per_right_answer`, `exam_code`)
-    VALUES ('$title','$date', '$time', '$questions', '$marks', '$code')";
+    $sql = "UPDATE `exams` SET `exam_title`='$title',`exam_datetime`='$date',
+    `duration`='$time',`total_question`='$questions',`marks_per_right_answer`='$marks',
+    `status`='$status',`exam_code`='$code' WHERE id = $id";
 
-    //? kiểm tra và thực thi lệnh
+    //? kiểm tra và thực thi câu lệnh
     if (mysqli_query($conn, $sql)) {
         header('location:index.php');
     } else {
-        header('location:Error.php');
+        header('location:error.php');
     }
 }
-
 
 //? đóng kết nối
 mysqli_close($conn);

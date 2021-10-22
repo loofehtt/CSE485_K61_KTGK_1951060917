@@ -44,8 +44,8 @@
                 echo '<td>' . $row['exam_code'] . '</td>';
                 echo '<td>
                 <a href="./detail.php?id=' . $row['id'] . '" class="btn btn-primary">Chi tiết</a>
-                <a href="process/edit.php?id=' . $row['id'] . '" class="btn btn-success">Sửa</a>
-                <a href="process/delete.php?id=' . $row['id'] . '" class="btn btn-danger">Xoá</a>
+                <a href="./edit.php?id=' . $row['id'] . '" class="btn btn-success">Sửa</a>
+                <a href="./delete.php?id=' . $row['id'] . '" class="btn btn-danger">Xoá</a>
                         
                 </td>';
                 echo '</tr>';
