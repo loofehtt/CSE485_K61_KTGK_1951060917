@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2021 lúc 05:18 AM
+-- Thời gian đã tạo: Th10 22, 2021 lúc 05:34 AM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -35,7 +35,7 @@ CREATE TABLE `exams` (
   `total_question` int(11) NOT NULL,
   `marks_per_right_answer` float NOT NULL,
   `created_on` date NOT NULL DEFAULT current_timestamp(),
-  `status` varchar(20) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'Created',
   `exam_code` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

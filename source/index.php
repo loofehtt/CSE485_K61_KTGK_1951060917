@@ -1,6 +1,6 @@
 <?php include './header.php'; ?>
 
-<a href="process/add.php" class="btn btn-success">Thêm bài thi</a>
+<a href="add.php" class="btn btn-success">Thêm bài thi</a>
 
 
 <table class="table table-responsive">
