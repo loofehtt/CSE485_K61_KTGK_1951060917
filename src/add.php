@@ -10,7 +10,7 @@ include './config.php';
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Tên bài thi</label>
         <div class="col-sm-10">
-            <input type="mumber" class="form-control" name="title">
+            <input type="text" class="form-control" name="title">
         </div>
     </div>
 

@@ -38,6 +38,7 @@ $id = $_GET['id'];
             <input type="text" class="form-control" name="marks">
         </div>
     </div>
+
     <div class="form-group row">
         <label for="" class="col-sm-2 col-form-label">Trạng thái</label>
         <div class="col-sm-10">
