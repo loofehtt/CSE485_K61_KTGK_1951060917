@@ -50,6 +50,8 @@
                 </td>';
                 echo '</tr>';
             }
+        } else {
+            header('location:error.php');
         }
         //* B4: đóng kết nối
         mysqli_close($conn);
